@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Ride</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-taxi"></i> Book a Ride</h1>
+    </header>
+    <main>
+        <div id="destination-selection">
+            <h2>Select Your Destination</h2>
+            <div class="input-group">
+                <select id="predefined-destinations">
+                    <option value="">Select a predefined destination</option>
+                    <option value="airport">Airport</option>
+                    <option value="downtown">Downtown</option>
+                    <option value="shopping-mall">Shopping Mall</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <button id="custom-destination-btn" class="btn primary">Custom Destination</button>
+            </div>
+        </div>
+        <div id="map-container" style="display: none;">
+            <div id="map"></div>
+            <button id="confirm-destination-btn" class="btn primary">Confirm Destination</button>
+        </div>
+        <div id="confirmation" style="display: none;">
+            <h2>Ride Confirmation</h2>
+            <p>Your ride is being submitted for approval.</p>
+            <p id="destination-display"></p>
+            <a href="/" class="btn">Back to Home</a>
+        </div>
+    </main>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <script src="book-ride.js"></script>
+</body>
+</html>

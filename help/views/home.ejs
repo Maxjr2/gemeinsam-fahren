@@ -1,0 +1,11 @@
+<%- include('layout') %>
+
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to Ride Sharing App</h1>
+    <p class="lead">Share rides and travel together!</p>
+    <% if (typeof user !== 'undefined' && user) { %>
+        <a class="btn btn-primary btn-lg" href="/dashboard" role="button">Go to Dashboard</a>
+    <% } else { %>
+        <a class="btn btn-primary btn-lg" href="/register" role="button">Register Now</a>
+    <% } %>
+</div>
